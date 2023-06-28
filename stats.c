@@ -9,13 +9,16 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c 
+ * @brief Implementation file for performing statistical analysis
  *
- * <Add Extended Description Here>
+ * This file contains C source code for performing statistical analytics such as
+ * finding median, mean, maximum & minimum values and sorting given dataset in
+ * decreasing order. It contains various function definitions for performing
+ * these operations.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Sai Prabhath Koneru
+ * @date 06/27/2023
  *
  */
 
@@ -38,6 +41,38 @@ void main() {
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
 
+  print_statistics(test, SIZE);
+  
+  return;
+
 }
 
 /* Add other Implementation File Code Here */
+
+void print_statistics(unsigned char *array_ptr, unsigned int array_size) {
+
+}
+
+void print_array(usigned char *array_ptr, unsigned int array_size) {
+
+}
+
+unsigned char find_median(unsigned char *array_ptr, unsigned int array_size) {
+
+}
+
+unsigned char find_mean(unsigned char *array_ptr, unsigned int array_size) {
+
+}
+
+unsigned char find_maximum(unsigned char *array_ptr, unsigned int array_size) {
+
+}
+
+unsigned char find_minimum(unsigned char *array_ptr, unsigned int array_size) {
+
+}
+
+void sort_array(unsigned char *array_ptr, unsigned int array_size) {
+
+}
