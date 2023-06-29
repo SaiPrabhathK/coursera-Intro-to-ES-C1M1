@@ -38,7 +38,7 @@
  */
 void print_statistics(unsigned char *array_ptr, unsigned int array_size);
 
-p/**
+/**
  * @brief Function to print the Array
  *
  * This function uses a for loop to iterate through each element in the array
@@ -75,7 +75,7 @@ unsigned char find_median(unsigned char *array_ptr, unsigned int array_size);
  *
  * @return The mean value of array elements
  */
-unsigned char find_mean(unsigned char *array_ptr, unsigned int array_size);
+unsigned int find_mean(unsigned char *array_ptr, unsigned int array_size);
 
 /**
  * @brief Function to find the maximum element of the array
@@ -107,13 +107,46 @@ unsigned char find_minimum(unsigned char *array_ptr, unsigned int array_size);
  * @brief Function to sort the elements of the array
  *
  * This function uses quick-sort sorting technique to sort the array elements
- * in decreasing order. Largest to Smallest value. The array is sorted in-place
+ * in decreasing order. Largest to Smallest value. The array is sorted
+ * in-place
  *
  * @param array_ptr - unsigned char pointer to an n-element array
- * @param array_size - unsigned integer as the size of the array
+ * @param i - signed integer as the lowest index of an array partition
+ * @param j - signed integer as the highest index of an array partition
  *
  * @return void
  */
-void sort_array(unsigned char *array_ptr, unsigned int array_size);
+void sort_array(unsigned char *array_ptr, int i, int j);
+
+/**
+ * @brief Function to partition the elements of the array w.r.t. pivot
+ *
+ * This function uses quick-sort sorting technique's partitioning algorithm to
+ * partition the array based on a selected pivot element where all the
+ * elements to the left of the pivot are greater than it (but not necessarily
+ * sorted) and all the elements to the right of the pivot are less than it
+ * (but not necessarily sorted)
+ *
+ * @param array_ptr - unsigned char pointer to an n-element array
+ * @param l - signed integer as the lowest index of an array partition
+ * @param h - signed integer as the highest index of an array partition
+ *
+ * @return index of the pivot element after partitioning
+ */
+int partition(unsigned char *array_ptr, int l, int h);
+
+/**
+ * @brief Function to swap two elements of the array
+ *
+ * This function swaps two elements in the array by using pointers to the
+ * elements
+ *
+ * @param array_element_ptr_1 - unsigned char pointer to array element
+ * @param array_element_ptr_1 - unsigned char pointer to array element
+ *
+ * @return void
+ */
+void swap(unsigned char *array_element_ptr_1,
+	  unsigned char *array_element_ptr_2);
 
 #endif /* __STATS_H__ */
